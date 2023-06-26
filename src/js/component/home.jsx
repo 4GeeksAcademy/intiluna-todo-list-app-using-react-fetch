@@ -11,7 +11,7 @@ const Home = () => {
 			<h1 className="text-center mt-5"> TODOS</h1>
 			<div className="macro">
 				<div className="input">
-					my input
+					
 					<Form/>
 					</div>
 				

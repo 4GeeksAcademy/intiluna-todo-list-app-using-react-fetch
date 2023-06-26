@@ -5,7 +5,9 @@ const Form = () => {
     
     const tareas = ["comer", "correr","nadar","cocinar"]
 
-
+    function eliminarTarea(item) {
+        console.log("funciona " + item);
+    }
     
     return (
         <div>
@@ -16,7 +18,7 @@ const Form = () => {
         <div className="ListaTareas">
         <div className="display">My TODO List</div>
             <ul>
-                {tareas.map((item)=><li>{item}</li>)}
+                {tareas.map((item)=><li>{item} <span onClick={()=>eliminarTarea(item)}>x</span></li>)}
             </ul>
         </div>
 
