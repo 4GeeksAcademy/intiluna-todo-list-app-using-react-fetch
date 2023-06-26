@@ -3,7 +3,7 @@ import "../../styles/index.css"
 
 const Form = () => {
     
-    const tareas = ["comer", "correr","nadar"]
+    const tareas = ["comer", "correr","nadar","cocinar"]
 
 
     
@@ -16,10 +16,7 @@ const Form = () => {
         <div className="ListaTareas">
         <div className="display">My TODO List</div>
             <ul>
-                <li>comer</li>
-                <li>correr</li>
-                <li>nadar</li>
-                <li>trabajar</li>
+                {tareas.map((item)=><li>{item}</li>)}
             </ul>
         </div>
 
