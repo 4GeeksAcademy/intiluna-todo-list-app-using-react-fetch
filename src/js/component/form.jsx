@@ -5,11 +5,11 @@ const Form = () => {
     
     const [inputValue, setInputValue ] = useState('');
    
-    const [tareas, setTareas] = useState(["comer", "correr","nadar","cocinar"])
+    const [tareas, setTareas] = useState(["Make the bed", "Wash my hands","Eat","Walk the dog"])
     //const tareas = ["comer", "correr","nadar","cocinar"]
 
     function actualizarTareas(e){
-        if ((e.key === "1") && (inputValue!="")){
+        if ((e.key === "Enter") && (inputValue!="")){
             setTareas((datosPrevios) => [...datosPrevios, inputValue]);
         }
         
@@ -29,17 +29,21 @@ const Form = () => {
     return (
         <div>
             <div className="inputTarea">
-            <input className="form-control" type="text" onChange={e => setInputValue(e.target.value)} value={inputValue} onKeyDown={(e)=>actualizarTareas(e)} placeholder="What needs to be done?" aria-label="default input example"/>      
+                <input className="form-control" type="text" onChange={e => setInputValue(e.target.value)} value={inputValue} onKeyDown={(e)=>actualizarTareas(e)} placeholder="What needs to be done?" aria-label="default input example"/>      
             
             
-        </div>
+            </div>
         
-        <div className="ListaTareas">
-        <div className="display">My TODO List</div>
-            <ul>
-                {tareas.map((item,index)=><li key={index}>{item} <span onClick={()=>eliminarTarea(item)}>x</span> </li>)}
-            </ul>
-        </div>
+            <div className="ListaTareas">
+        
+                <ul>
+                    {tareas.map((item,index)=><li key={index}>{item} <span onClick={()=>eliminarTarea(item)}>x</span> </li>)}
+                </ul>
+            </div>
+
+            <div className="footerCount">
+                <p>{tareas.length} item left</p>
+            </div>
 
         </div>
 
