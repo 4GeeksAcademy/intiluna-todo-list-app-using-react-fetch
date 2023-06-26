@@ -3,10 +3,18 @@ import "../../styles/index.css"
 
 const Form = () => {
     
+    //const [tareas, setTareas] = useState(["comer", "correr","nadar","cocinar"])
     const tareas = ["comer", "correr","nadar","cocinar"]
 
+    function actualizarTareas(){
+        setTareas(tareas.concat(item))
+    }
+    
     function eliminarTarea(item) {
         console.log("funciona " + item);
+        //filtrar
+        tareas.filter((elemento)=>elemento!=item)
+        console.log("tareas: " + tareas );
     }
     
     return (
