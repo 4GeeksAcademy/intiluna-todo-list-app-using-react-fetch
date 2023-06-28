@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "../component/form.jsx"
+import Cuenta from "../component/cuenta.jsx"
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -11,7 +12,7 @@ const Home = () => {
 			<h1 className="text-center mt-5"> TODOS</h1>
 			<div className="macro">
 				<div className="input">
-					
+					<Cuenta/>
 					<Form/>
 					</div>
 				

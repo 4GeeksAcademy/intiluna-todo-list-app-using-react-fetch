@@ -28,21 +28,21 @@ const Form = () => {
 
     return (
         <div>
-            <div className="inputTarea">
-                <input className="form-control" type="text" onChange={e => setInputValue(e.target.value)} value={inputValue} onKeyDown={(e)=>actualizarTareas(e)} placeholder="What needs to be done?" aria-label="default input example"/>      
+            <div className="cuentaInput">
+                <input className="form-control" type="text" onChange={e => setInputValue(e.target.value)} value={inputValue} onKeyDown={(e)=>actualizarTareas(e)} placeholder="Write short user name withoutspace (e.g:il28)" aria-label="default input example"/>
+                
+                <div className="cuentaBotones d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary">Create user account</button>
+                    <button type="button" class="btn btn-success">Connect with user account</button> 
+                </div>
+                
             
             
             </div>
         
-            <div className="ListaTareas">
-        
-                <ul>
-                    {tareas.map((item,index)=><li key={index}>{item} <span onClick={()=>eliminarTarea(item)}>x</span> </li>)}
-                </ul>
-            </div>
-
-            <div className="footerCount">
-                <p>{tareas.length} item left</p>
+            
+            <div className="respuestaEspacio">
+                <p>Respuesta de servidor</p>
             </div>
 
         </div>
@@ -56,8 +56,3 @@ const Form = () => {
 };
 
 export default Form;
-
-
-
-
-
