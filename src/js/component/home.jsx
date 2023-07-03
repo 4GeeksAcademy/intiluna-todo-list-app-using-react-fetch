@@ -13,7 +13,7 @@ const Home = () => {
 			<div className="macro">
 				<div className="input">
 					<Cuenta/>
-					<Form/>
+					
 					</div>
 				
 			</div>
