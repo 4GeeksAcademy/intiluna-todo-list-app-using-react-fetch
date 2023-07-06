@@ -158,7 +158,7 @@ const Form = () => {
                 
         
                 <ul>
-                    {tareasApi.map((item,index)=><li key={index}>{item.label} <span onClick={()=>eliminarTareaApi(item)}>x</span></li>)}
+                    {tareasApi.length>0?   tareasApi.map((item,index)=><li key={index}>{item.label} <span onClick={()=>eliminarTareaApi(item)}>x</span></li>): "No hay tareas"}
                 </ul>
             </div>
 
